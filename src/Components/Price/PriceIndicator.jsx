@@ -4,7 +4,6 @@ import React from 'react';
 export const PriceIndicator = props => {
     const price = props.price;
     const priceNumbers = price.toPrecision(6);
-    console.log(price, priceNumbers, priceNumbers.length);
     return (
         <div className={'price-indicator' + (props.buy ? ' buy' : ' sell')}>
             {props.buy ?

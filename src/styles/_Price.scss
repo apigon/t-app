@@ -7,6 +7,29 @@
         color: $white;
         background: $header;
         font-weight: bolder;
+        position: relative;
+        &.down{
+            &::after{
+                content:'';
+                position: absolute;
+                top: 30px;
+                left: 139px;
+                border-top: 10px solid $red;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+            }
+        }
+        &.up{
+            &::after{
+                content:'';
+                position: absolute;
+                top: 30px;
+                left: 139px;
+                border-bottom: 10px solid $green;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+            }
+        }
     }
     .prices {
         display: flex;
