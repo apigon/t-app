@@ -42,7 +42,20 @@
                 width: 36px;
                 height: 36px;
                 background: $white;
-                z-index:-1;
+                z-index: -1;
+            }
+            &:hover {
+                color: $white;
+                border-color: $blue;
+                background: $red;
+                transition-property: all;
+                transition-duration: 500ms;
+            }
+            &:hover::after {
+                border-color: $blue;
+                background: $red;
+                transition-property: all;
+                transition-duration: 500ms;
             }
         }
         &.sell {
@@ -51,7 +64,7 @@
             color: $green;
             margin-left: 35px;
             text-align: right;
-            .price{
+            .price {
                 justify-content: flex-end;
             }
             &::before {
@@ -67,26 +80,39 @@
                 width: 36px;
                 height: 36px;
                 background: $white;
-                z-index:-1;
+                z-index: -1;
+            }
+            &:hover {
+                color: $white;
+                border-color: $blue;
+                background: $green;
+                transition-property: all;
+                transition-duration: 500ms;
+            }
+            &:hover::before {
+                border-color: $blue;
+                background: $green;
+                transition-property: all;
+                transition-duration: 500ms;
             }
         }
-        .text{
+        .text {
             font-size: 12px;
         }
-        .price{
+        .price {
             font-size: 15px;
             display: flex;
             flex-direction: row;
             height: 23px;
-            .start{
+            .start {
                 align-self: flex-end;
             }
-            .middle{
+            .middle {
                 font-size: 18px;
                 font-weight: bolder;
                 align-self: flex-end;
             }
-            .end{
+            .end {
                 align-self: flex-start;
             }
         }
