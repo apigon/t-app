@@ -1,0 +1,94 @@
+.price-wrapper {
+    margin-top: 20px;
+    border: $border;
+    border-radius: $border-radius;
+    .price-header {
+        text-align: center;
+        color: $white;
+        background: $header;
+        font-weight: bolder;
+    }
+    .prices {
+        display: flex;
+        padding: 10px 10px 40px 10px;
+    }
+    .price-indicator {
+        display: flex;
+        flex-direction: column;
+        background: $white;
+        border-radius: $border-radius 0 0 $border-radius;
+        border-top: $border;
+        border-bottom: $border;
+        position: relative;
+        width: 90px;
+        height: 41px;
+        z-index: 2;
+        padding: 5px;
+        &.buy {
+            border-left: $border;
+            border-radius: $border-radius 0 0 $border-radius;
+            color: $red;
+            margin-right: 35px;
+            &::after {
+                content: '';
+                border-right: $border;
+                border-bottom: $border;
+                border-width: 0 1px 1px 0;
+                border-bottom-right-radius: $border-radius;
+                transform: rotate(-45deg);
+                position: absolute;
+                top: 7px;
+                left: 82px;
+                width: 36px;
+                height: 36px;
+                background: $white;
+                z-index:-1;
+            }
+        }
+        &.sell {
+            border-right: $border;
+            border-radius: 0 $border-radius $border-radius 0;
+            color: $green;
+            margin-left: 35px;
+            text-align: right;
+            .price{
+                justify-content: flex-end;
+            }
+            &::before {
+                content: '';
+                border-right: $border;
+                border-bottom: $border;
+                border-width: 0 1px 1px 0;
+                border-bottom-right-radius: $border-radius;
+                transform: rotate(135deg);
+                position: absolute;
+                top: 7px;
+                left: -19px;
+                width: 36px;
+                height: 36px;
+                background: $white;
+                z-index:-1;
+            }
+        }
+        .text{
+            font-size: 12px;
+        }
+        .price{
+            font-size: 15px;
+            display: flex;
+            flex-direction: row;
+            height: 23px;
+            .start{
+                align-self: flex-end;
+            }
+            .middle{
+                font-size: 18px;
+                font-weight: bolder;
+                align-self: flex-end;
+            }
+            .end{
+                align-self: flex-start;
+            }
+        }
+    }
+}

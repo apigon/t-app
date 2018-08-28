@@ -1,0 +1,9 @@
+.price-list{
+    padding-top: 15px;
+    display: flex;
+    background: $background;
+    height: 100vh;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
