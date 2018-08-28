@@ -1,3 +1,7 @@
+#root {
+  height: 100vh;
+  background: #F5F5F5; }
+
 body {
   margin: 0;
   font-family: lato; }
@@ -46,7 +50,6 @@ pre {
   padding-top: 15px;
   display: flex;
   background: #F5F5F5;
-  height: 100vh;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-around; }
@@ -94,6 +97,17 @@ pre {
         height: 36px;
         background: white;
         z-index: -1; }
+      .price-wrapper .price-indicator.buy:hover {
+        color: white;
+        border-color: blue;
+        background: red;
+        transition-property: all;
+        transition-duration: 500ms; }
+      .price-wrapper .price-indicator.buy:hover::after {
+        border-color: blue;
+        background: red;
+        transition-property: all;
+        transition-duration: 500ms; }
     .price-wrapper .price-indicator.sell {
       border-right: 1px solid #585858;
       border-radius: 0 4px 4px 0;
@@ -116,6 +130,17 @@ pre {
         height: 36px;
         background: white;
         z-index: -1; }
+      .price-wrapper .price-indicator.sell:hover {
+        color: white;
+        border-color: blue;
+        background: green;
+        transition-property: all;
+        transition-duration: 500ms; }
+      .price-wrapper .price-indicator.sell:hover::before {
+        border-color: blue;
+        background: green;
+        transition-property: all;
+        transition-duration: 500ms; }
     .price-wrapper .price-indicator .text {
       font-size: 12px; }
     .price-wrapper .price-indicator .price {
