@@ -6,3 +6,13 @@ export const initialData = [
     { pair: "USD JPY", buy: 110.467, sell: 110.417 },
     { pair: "EUR JPY", buy: 120.589, sell: 120.491 }
 ];
+
+export const getNewData = () => {
+    const newData = [];
+    initialData.forEach(price => {
+        newData.push({ ...price, buy: randomPrice(0.9 * price.buy, 1.1 * price.buy), sell: randomPrice(0.9 * price.sell, 1.1 * price.sell) })
+    });
+    return newData;
+}
+
+const randomPrice = (min, max) => Math.random() * (max - min) + max;

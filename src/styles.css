@@ -62,7 +62,24 @@ pre {
     text-align: center;
     color: white;
     background: #606060;
-    font-weight: bolder; }
+    font-weight: bolder;
+    position: relative; }
+    .price-wrapper .price-header.down::after {
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: 139px;
+      border-top: 10px solid red;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent; }
+    .price-wrapper .price-header.up::after {
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: 139px;
+      border-bottom: 10px solid green;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent; }
   .price-wrapper .prices {
     display: flex;
     padding: 10px 10px 40px 10px; }
